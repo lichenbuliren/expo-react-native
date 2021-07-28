@@ -18,21 +18,6 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 }
 ```
 
-## 导航根组件
-
-``` tsx
-const Stack = createStackNavigator<RootStackParamList>();
-
-function RootNavigator() {
-  return (
-    <Stack.Navigator mode="modal" screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-    </Stack.Navigator>
-  );
-}
-```
-
 ## Tab 页面导航
 
 ``` tsx
@@ -69,10 +54,17 @@ export default function BottomTabNavigator() {
 ## 页面之间跳转
 
 1、使用 `useNavigation` hook 来做命令式跳转
+
+``` tsx
+const navigation = useNavigation()
+navigation.navigate('Profile')
+```
+
 2、函数式组件，提前声明注入属性类型
 
 ``` tsx
 import { StackNavigationHelpers } from '@react-navigation/stack/lib/typescript/src/types';
+
 const TabOneScreen: React.FC<StackNavigationHelpers> = ({ navigate }) => {}
 ```
 
