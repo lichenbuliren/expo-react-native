@@ -1,5 +1,7 @@
 # Expo React Native 探索
 
+文档地址：https://docs.expo.io/tutorial
+
 # 导航
 
 ## 导航根容器
@@ -68,6 +70,27 @@ import { StackNavigationHelpers } from '@react-navigation/stack/lib/typescript/s
 const TabOneScreen: React.FC<StackNavigationHelpers> = ({ navigate }) => {}
 ```
 
+3、打开 web 浏览器
+
+``` tsx
+import * as WebBrowser from 'expo-web-browser';
+
+WebBrowser.openBrowserAsync(
+  'https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet'
+);
+```
+
+# 点击
+1、任意元素可点击，通过 `TouchableOpacity` 组件包裹
+
+# TODO
+
+- [ ] 闪屏
+- [ ] 前后台切换事件监听
+- [ ] 打包构建
+- [ ] 页面切换动画
+- [ ] 网络请求
+- [ ] 路由组织最佳实践
 # 遇到问题
 1. 控制台扫码，无法打开 Expo 项目：先在控制台通过 `expo login` 登录
 2. 全局安装 `npm install -g @expo/ngrok`，来支持 `tunnel` 方式启动
