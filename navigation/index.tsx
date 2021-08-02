@@ -50,7 +50,7 @@ function RootNavigator() {
       />
       <Stack.Screen
         name="Profile"
-        options={{ title: "个人中心3" }}
+        options={{ title: "个人中心4" }}
         component={ProfileScreen}
       />
       <Stack.Screen
